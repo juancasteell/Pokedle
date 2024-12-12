@@ -19,7 +19,7 @@ header{
 .iconos {
   display: flex;
   justify-content: space-between;
-  margin: 20px 20px 0px;
+  margin: 0px 20px;
 }
 
 a {
@@ -34,8 +34,8 @@ a {
   left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #333;
-  border-right: 1px solid #ff0000;
+  background: linear-gradient(145deg, #000000, #55009b, #000000);
+  border-right: 1px solid #a200ff;
   padding: 20px;
   transition: left 0.3s ease;
   flex-direction: column;
@@ -44,4 +44,16 @@ a {
 
 .menu-desplegable.active {
   left: 0;
+}
+
+/*footer*/
+
+footer{
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
