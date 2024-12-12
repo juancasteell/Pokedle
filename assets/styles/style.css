@@ -9,10 +9,6 @@ html,
 body{
    font-family: "Lexend Deca", sans-serif;
   background: var(--default);
-
- 
- 
-
 }
 
 /* Header */
@@ -52,9 +48,6 @@ a {
 .menu-desplegable.active {
   left: 0;
 }
-
-
-
 
 #game{
   display: grid;
