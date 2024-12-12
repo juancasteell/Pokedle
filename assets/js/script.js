@@ -1,5 +1,6 @@
 // Aqui ira todo el tema visual (transiciones, animaciones, etc)
 
+// Función para mostrar y ocultar el menu desplegable ----------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   let desplegable = document.querySelector(".desplegable");
   let menuDesplegable = document.querySelector(".menu-desplegable");
