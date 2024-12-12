@@ -7,15 +7,10 @@
 body{
     background-image: url(../img/wallpaper_pokemon.jpg);
     color: #fff;
+    
 }
 
-/* Header */
-header{
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+
 
 .iconos {
     display: flex;
@@ -48,13 +43,56 @@ form{
   margin: auto;
 }
 
-.contenedor{
-    background-color: black;
-    width: 500px;
-   padding-bottom: 20px;
-   border-radius: 10px;
-   border: 2px solid purple;
+.contenedor {
+    background: linear-gradient(145deg, #000000, #55009b); 
+    width: 450px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px; 
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.contenedor::after, .contenedor::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 10%, #a200ff, transparent 50%); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 20px; 
+    animation: 6s spin linear infinite;
+}
+
+.contenedor::before {
+    filter: blur(1.8rem);
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
 
 legend{
     font-size: 18px;
@@ -68,46 +106,23 @@ fieldset{
     border-radius: 5px;
 }
 
-.nombre{
+.nombre, .correo, .mensaje {
     margin: 10px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.nombre input{
-    width: 60%; 
+.nombre input, .correo input, .mensaje textarea {
+    width: 100%; 
     border-radius: 5px;
     border: 1px solid #ccc;
-    display: block;
     margin-top: 5px;
     padding: 4px;
-}
-
-.correo{
-    margin: 10px 10px 20px 10px;
-}
-
-.correo input{
-    width: 60%; 
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    display: block;
-    margin-top: 5px;
-    padding: 4px;
-}
-
-.mensaje{
-    margin: 10px 10px 20px 10px;
-}
-
-.mensaje textarea{
-    width: 90%; 
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    display: block;
-    margin-top: 5px;
 }
 
 button{
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -127,7 +142,7 @@ button{
 /*footer*/
 
 footer{
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 10px 0;
     text-align: center;
