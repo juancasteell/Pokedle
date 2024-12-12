@@ -23,6 +23,13 @@ header{
   text-align: center;
 }
 
+header img{
+  width: 950px;
+  height: 150px;
+  object-fit: contain;
+  
+}
+
 .iconos {
   display: flex;
   justify-content: space-between;
