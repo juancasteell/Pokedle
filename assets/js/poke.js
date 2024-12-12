@@ -1,6 +1,4 @@
 // Aqui va el codigo que se encarga de conectar con la PokeApi
-<<<<<<< Updated upstream
-=======
 
 const BASE_URL = "https://pokeapi.co/api/v2/";
 
@@ -54,4 +52,3 @@ const types = {
   fairy: "Hada",
   dark: "Siniestro",
 };
->>>>>>> Stashed changes
