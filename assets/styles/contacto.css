@@ -5,12 +5,13 @@
 }
 
 body {
-  
+    background: url(../img/wallpaper_pokemon.jpg);
   color: #fff;
 }
 
 /* Formulario */
 section {
+   
   display: flex;
   flex-direction: column;
   align-items: center;
