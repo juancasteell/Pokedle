@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
 /* Header */
 header {
   background-color: #333;
@@ -41,4 +45,3 @@ a {
 .menu-desplegable.active {
   left: 0;
 }
-
