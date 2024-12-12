@@ -75,11 +75,13 @@ form {
 }
 
 
+
 legend{
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+
 }
 
 @keyframes spin {
@@ -89,7 +91,6 @@ legend{
   to {
     --angle: 360deg;
   }
-
 }
 
 legend {
@@ -135,9 +136,6 @@ button {
   margin-right: auto;
 }
 
-
-
-
 footer {
   background-color: #000000;
   color: #fff;
@@ -147,4 +145,3 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
