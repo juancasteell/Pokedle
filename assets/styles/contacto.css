@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/wallpaper_pokemon.jpg);
+    color: #fff;
+}
+
+/* Header */
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+    /* Formulario */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;  
+    padding-top: 60px;
+    
+}
+
+h2{
+    margin: 30px 0;
+    text-align: center;
+}
+
+form{
+   width: 300px;
+  margin: auto;
+}
+
+.contenedor{
+    background-color: black;
+    width: 500px;
+   padding-bottom: 20px;
+   border-radius: 10px;
+   border: 2px solid purple;
+}
+
+legend{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+fieldset{
+    border-radius: 5px;
+}
+
+.nombre{
+    margin: 10px 10px 20px 10px;
+}
+
+.nombre input{
+    width: 60%; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 5px;
+    padding: 4px;
+}
+
+.correo{
+    margin: 10px 10px 20px 10px;
+}
+
+.correo input{
+    width: 60%; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 5px;
+    padding: 4px;
+}
+
+.mensaje{
+    margin: 10px 10px 20px 10px;
+}
+
+.mensaje textarea{
+    width: 90%; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 5px;
+}
+
+button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 0 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+    
+
+
+
+/*footer*/
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -31,6 +31,7 @@ async function getPokemonRandom() {
 
 getPokemonRandom().then(console.log);
 
+
 // Objeto que contiene los tipos del Pokémon--------------------------------------------------
 const types = {
   water: "Agua",
