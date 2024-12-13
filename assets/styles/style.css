@@ -6,6 +6,7 @@
 
 body {
   font-family: "Lexend Deca", sans-serif;
+  background: url(../img/wallpaper_main.webp);
 }
 
 /* Header */
@@ -14,6 +15,7 @@ header {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+ 
 }
 
 header img{
@@ -26,7 +28,7 @@ header img{
 .iconos {
   display: flex;
   justify-content: space-between;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 a {
