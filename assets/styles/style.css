@@ -53,6 +53,55 @@ a {
   left: 0;
 }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content .tarjetas {
+  margin: auto;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  gap: 25px;
+  flex-flow: row wrap;
+}
+
+.tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 450px;
+  height: 250px;
+  flex-direction: column;
+  margin: 3% 0;
+}
+
+.tarjeta:hover {
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  border-radius: 10px;
+  width: 100vh;
+  height: 12vh;
+  margin-top: 0.5%;
+  padding: 0 15px;
+}
+
 footer {
   background-color: #000000;
   color: #fff;
