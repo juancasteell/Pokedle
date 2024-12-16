@@ -53,6 +53,22 @@ a {
   left: 0;
 }
 
+.contenedor-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.seleccion-gen {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 20%;
+  flex-direction: column;
+}
+
 .main-content {
   display: flex;
   justify-content: center;
