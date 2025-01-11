@@ -15,35 +15,44 @@ const generations = {
   9: { start: 906, end: 1008 },
 };
 
-switch (key) {
-  case value:
-    break;
+document.getElementById("select-gen").addEventListener("change", function () {
+  const selectedGen = parseInt(this.value);
 
-  case value:
-    break;
+  switch (selectedGen) {
+    case 1:
+      console.log(generations[1]);
+      break;
+    case 2:
+      console.log(generations[2]);
+      break;
+    case 3:
+      console.log(generations[3]);
+      break;
+    case 4:
+      console.log(generations[4]);
+      break;
+    case 5:
+      console.log(generations[5]);
+      break;
+    case 6:
+      console.log(generations[6]);
+      break;
+    case 7:
+      console.log(generations[7]);
+      break;
+    case 8:
+      console.log(generations[8]);
+      break;
+    case 9:
+      console.log(generations[9]);
+      break;
+    default:
+      console.log(generations[1]);
+      break;
+  }
+});
 
-  case value:
-    break;
-
-  case value:
-    break;
-
-  case value:
-    break;
-
-  case value:
-    break;
-
-  case value:
-    break;
-
-  case value:
-    break;
-
-  default:
-    break;
-}
-
+// Funcion de referencia----------------------------------------------------------------------------
 // Funcion que genera el nombre random de un pokemon------------------------------------------------
 async function getPokemonRandom(gen) {
   // Obtiene la primera generación de Pokémon del objeto 'generations'
@@ -64,6 +73,7 @@ async function getPokemonRandom(gen) {
   // el nombre y no todo (stats, ataques, etc)
   return pokemon.name;
 }
+// -------------------------------------------------------------------------------------------------
 
 // Funcion que genera el nombre random de un pokemon------------------------------------------------
 async function getPokemonRandom() {
