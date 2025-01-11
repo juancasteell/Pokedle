@@ -47,7 +47,7 @@ document.getElementById("select-gen").addEventListener("change", function () {
       console.log(generations[9]);
       break;
     default:
-      console.log(generations[2]);
+      console.log(generations[1]);
       break;
   }
 });
