@@ -15,7 +15,7 @@ const generations = {
   9: { start: 906, end: 1008 },
 };
 
-document.getElementById("select-gen").addEventListener("change", function () {
+function scanerGeneracion() {
   const selectedGen = parseInt(this.value);
 
   switch (selectedGen) {
@@ -50,39 +50,20 @@ document.getElementById("select-gen").addEventListener("change", function () {
       console.log(generations[1]);
       break;
   }
-});
-
-// Funcion de referencia----------------------------------------------------------------------------
-// Funcion que genera el nombre random de un pokemon------------------------------------------------
-async function getPokemonRandom(gen) {
-  // Obtiene la primera generación de Pokémon del objeto 'generations'
-  const genSelected = generations[gen];
-
-  // Genera un ID aleatorio dentro de la primera generación
-  const randomId =
-    Math.floor(Math.random() * (genSelected.end - genSelected.start + 1)) +
-    genSelected.start;
-
-  // Realiza una solicitud fetch a la API de Pokémon con el ID aleatorio generado
-  const response = await fetch(`${BASE_URL}pokemon/${randomId}`);
-
-  // Convierte la respuesta de la API a formato JSON
-  const pokemon = await response.json();
-
-  // Devuelve el nombre del Pokémon obtenido .name para que solo devuelva
-  // el nombre y no todo (stats, ataques, etc)
-  return pokemon.name;
 }
-// -------------------------------------------------------------------------------------------------
+
+document
+  .getElementById("select-gen")
+  .addEventListener("change", scanerGeneracion);
 
 // Funcion que genera el nombre random de un pokemon------------------------------------------------
-async function getPokemonRandom() {
+async function getPokemonRandomGeneracion() {
   // Obtiene la primera generación de Pokémon del objeto 'generations'
-  const gen1 = generations[1];
+  const gen = scanerGeneracion();
 
   // Genera un ID aleatorio dentro de la primera generación
   const randomId =
-    Math.floor(Math.random() * (gen1.end - gen1.start + 1)) + gen1.start;
+    Math.floor(Math.random() * (gen.end - gen.start + 1)) + gen.start;
 
   // Realiza una solicitud fetch a la API de Pokémon con el ID aleatorio generado
   const response = await fetch(`${BASE_URL}pokemon/${randomId}`);
@@ -95,7 +76,7 @@ async function getPokemonRandom() {
   return pokemon.name;
 }
 
-getPokemonRandom().then(console.log);
+getPokemonRandomGeneracion().then(console.log);
 
 // Objeto que contiene los tipos del Pokémon--------------------------------------------------
 const types = {
