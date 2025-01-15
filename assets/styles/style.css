@@ -56,10 +56,9 @@ a {
 
 
 .contenedor-select {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2%;
+  position: absolute;
+  left: 2%;
+  top: 20%;
 }
 
 .seleccion-gen, .seleccion-tipo, .seleccion-region{
@@ -89,7 +88,7 @@ a {
   }
 }
 
-#select-gen {
+.estilos-select {
   background:  #9b24fc;
   color: #fff;
   padding: 5px;
@@ -98,10 +97,11 @@ a {
   margin: 10px 0 0 0;
 }
 
-.contenedor-pista{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.contenedor-pista {
+ position: absolute;
+ right: 2%;
+  top: 20%;
+  
 }
 
 .pista {
