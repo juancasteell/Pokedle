@@ -1,0 +1,139 @@
+html,
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#game {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+}
+
+:root {
+  --empty: rgba(255, 255, 255, 0.8);
+  --wrong: #e4a81d;
+  --right: #43a047;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+  gap: 4px;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--empty);
+  background-color: var(--empty);
+  margin: 4px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.box.empty {
+  background: var(--empty, #ffffff);
+}
+
+.box.wrong {
+  background: var(--wrong);
+}
+
+.box.right {
+  background: var(--right);
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.keyboard {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.special-row {
+  justify-content: space-between; /* Alinear los botones en los extremos */
+}
+
+.spacer {
+  flex-grow: 1; /* Espaciador flexible para separar los botones */
+}
+
+.key.special-key {
+  background-color: var(--empty);
+  border-color: var(--empty);
+  color: #000;
+}
+
+.key.special-key:active {
+  transform: scale(0.95);
+}
+
+.key {
+  width: 50px;
+  height: 60px;
+  border: 2px solid var(--empty);
+  background-color: var(--empty);
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.key.right {
+  background-color: var(--right);
+  border-color: var(--right);
+  color: #fff;
+}
+
+.key.wrong {
+  background-color: var(--wrong);
+  border-color: var(--wrong);
+  color: #fff;
+}
+
+.key.empty {
+  background-color: #616161;
+  border-color: #616161;
+  color: #fff;
+}
