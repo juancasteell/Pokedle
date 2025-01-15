@@ -48,10 +48,13 @@
 
     <main>
 
-        <div class="seleccion-tipo">
+        <div class="contenedor-select">
+         <div class="seleccion-tipo">
             <h3>Selecciona tu Tipo</h3>
-            <select name="generaciones" id="selected-type">
-                <option value="0">Selecciona un tipo...</option>
+
+            <select name="generaciones" id="select-gen" class="estilos-select">
+
+              <option value="0">Selecciona un tipo...</option>
                 <option value="1">Agua</option>
                 <option value="2">Fuego</option>
                 <option value="3">Planta</option>
@@ -72,8 +75,11 @@
                 <option value="18">Siniestro</option>
             </select>
 
+            </div>
         </div>
-        <section class="pista">Tipo: Agua</section>
+        <div class="contenedor-pista">
+            <section class="pista">Tipo: Agua</section>
+        </div>
 
         <div id="game">
 
@@ -81,8 +87,7 @@
 
             </div>
         </div>
-        <section class="teclado">Aqui ira un teclado que si no tienes teclado fisico puedas usar el raton o la tecla taq
-        </section>
+        
     </main>
 
 
