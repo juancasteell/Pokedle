@@ -92,6 +92,7 @@ body {
   background-color: var(--empty);
   border-color: var(--empty);
   color: #000;
+
 }
 
 .key.special-key:active {
@@ -133,7 +134,15 @@ body {
 }
 
 .key.empty {
+
   background-color: #616161;
   border-color: #616161;
   color: #fff;
 }
+
+  background-color: #616161; 
+  border-color: #616161;
+  color: #fff;
+}
+
+
