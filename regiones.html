@@ -1,0 +1,89 @@
+<!-- Ahmad butanero -->
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/805ebedd1b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/juego.css">
+    <link rel="icon" href="./assets/img/pika_favicon.png" type="image/x-icon">
+    <title>Regiones</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html"></a>
+        <img id="titulo" src="./assets/img/Pokédle.png" alt="pic">
+        <nav class="barra">
+
+            <div class="iconos">
+                <div class="header-icons">
+                    <a class="desplegable" href="#"><i class="fa-solid fa-bars"></i> Menu</a>
+                </div>
+
+                <div class="header-icons">
+                    <a href="contacto.html"><i class="fa-solid fa-user"></i> Contacto</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Menú desplegable -->
+    <div class="menu-desplegable">
+        <a href="index.html">Inicio</a>
+        <a href="generaciones.html">Pokedle por Generaciones</a>
+        <a href="tipos.html">Pokedle por Tipos</a>
+        <a href="legendarios.html">Pokedle por Legendarios</a>
+        <a href="contacto.html">Contacta con nosotros</a>
+    </div>
+
+    <main>
+
+        <div class="seleccion-region">
+            <h3>Selecciona tu Region</h3>
+            <select name="generaciones" id="">
+                <option value="1">Kanto</option>
+                <option value="2">Jhoto</option>
+                <option value="3">Hoenn</option>
+                <option value="4">Sinnoh</option>
+                <option value="5">Teselia</option>
+                <option value="6">Kalos</option>
+                <option value="7">Alola</option>
+                <option value="8">Galar</option>
+                <option value="9">Paldea</option>
+            </select>
+
+        </div>
+        <section class="pista">Tipo: Agua</section>
+
+        <div id="game">
+
+            <div class="grid">
+
+            </div>
+        </div>
+        <section class="teclado">Aqui ira un teclado que si no tienes teclado fisico puedas usar el raton o la tecla taq
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2023 Pokédle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/poke.js"></script>
+    <script src="/assets/js/juego.js" type="module"></script>
+
+</body>
+
+</html>

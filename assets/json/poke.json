@@ -1,0 +1,72 @@
+{
+  "id": 1008,
+  "name": "Miraidon",
+  "base_experience": 340,
+  "height": 35,
+  "is_default": true,
+  "order": 1008,
+  "weight": 2400,
+  "forms": [
+    {
+      "name": "miraidon",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/1008/"
+    }
+  ],
+  "game_indices": [
+    {
+      "game_index": 1008,
+      "version": {
+        "name": "scarlet",
+        "url": "https://pokeapi.co/api/v2/version/35/"
+      }
+    }
+  ],
+  "held_items": [],
+  "location_area_encounters": "https://pokeapi.co/api/v2/pokemon/1008/encounters",
+  "moves": [
+    {
+      "move": {
+        "name": "electro_drift",
+        "url": "https://pokeapi.co/api/v2/move/844/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/20/"
+          }
+        }
+      ]
+    }
+  ],
+  "species": {
+    "name": "miraidon",
+    "url": "https://pokeapi.co/api/v2/pokemon-species/1008/"
+  },
+  "sprites": {
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
+    "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1008.png"
+  },
+
+  "types": [
+    {
+      "slot": 1,
+      "type": {
+        "name": "electric",
+        "url": "https://pokeapi.co/api/v2/type/13/"
+      }
+    },
+    {
+      "slot": 2,
+      "type": {
+        "name": "dragon",
+        "url": "https://pokeapi.co/api/v2/type/16/"
+      }
+    }
+  ]
+}

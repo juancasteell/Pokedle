@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="stylesheet" href="./assets/styles/juego.css">
     <link rel="icon" href="./assets/img/pika_favicon.png" type="image/x-icon">
     <title>Pokedle</title>
 </head>
@@ -19,6 +18,8 @@
 <body>
 
     <header>
+
+        <a href="index.html"></a>
         <img id="titulo" src="./assets/img/Pokédle.png" alt="pic">
         <nav class="barra">
 
@@ -37,24 +38,50 @@
 
     <!-- Menú desplegable -->
     <div class="menu-desplegable">
-        <a href="#">Lucas</a>
-        <a href="#">Ahmad</a>
+        <a href="generaciones.html">Pokedle por Generaciones</a>
+        <a href="tipos.html">Pokedle por Tipos</a>
+        <a href="regiones.html">Pokedle por Regiones</a>
+        <a href="legendarios.html">Pokedle por Legendarios</a>
         <a href="contacto.html">Contacta con nosotros</a>
     </div>
 
-    <main>
-        <section class="pista">Tipo: Agua</section>
-        <br>
+    <main class="main-content">
+        <section class="tarjetas">
 
-        <div id="game">
+            <a href="generaciones.html" class="links-tarjetas">
+                <div class="tarjeta generaciones">
+                    <h2 class="titulo-juego">Pokedle Generaciones</h2>
+                    <p class="descrip-juego">Aqui podras jugar al pokedle por generaciones</p>
+                </div>
+            </a>
+            <a href="tipos.html" class="links-tarjetas">
+                <div class="tarjeta tipos">
+                    <h2 class="titulo-juego">Pokedle Tipos</h2>
+                    <p class="descrip-juego">Aqui podras jugar al pokedle por tipos</p>
+                </div>
+            </a>
+            <a href="regiones.html" class="links-tarjetas">
+                <div class="tarjeta regiones">
+                    <h2 class="titulo-juego">Pokedle Regiones</h2>
+                    <p class="descrip-juego">Aqui podras jugar al pokedle por regiones</p>
+                </div>
+            </a>
+            <a href="legendarios.html" class="links-tarjetas">
+                <div class="tarjeta legendarios">
+                    <h2 class="titulo-juego">Pokedle Legendarios</h2>
+                    <p class="descrip-juego">Aqui podras jugar al pokedle por legendarios</p>
+                </div>
+            </a>
 
-            <div class="grid">
-
-            </div>
-        </div>
-        <br>
-        <section class="teclado">Aqui ira un teclado que si no tienes teclado fisico puedas usar el raton o la tecla taq
         </section>
+
+        <section class="info">
+            <h2>¿Qué es Pokédle?</h2>
+            <p>Pokedle es un juego de memoria en el que tienes que encontrar las parejas de los pokemons que se esconden
+                detras de las cartas. Puedes jugar por generaciones, tipos, regiones o legendarios. ¡Elige tu modo de
+                juego y a jugar!</p>
+        </section>
+
     </main>
 
 
@@ -63,8 +90,6 @@
     </footer>
 
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/poke.js"></script>
-    <script src="/assets/js/juego.js" type="module"></script>
 
 </body>
 

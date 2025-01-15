@@ -135,7 +135,7 @@ function startup() {
 
   registerKeyboardEvents();
 
-  console.log(state.secret);
+  console.log("Chivatazo: " + state.secret);
 }
 
 startup();
