@@ -31,27 +31,3 @@ async function getPokemonRandomTipo(event) {
   return pokemon.name;
 }
 // -------------------------------------------------------------------------------------------------
-
-async function getPokemonByType(type) {
-  let response = await fetch(`${BASE_URL}type/${type}`);
-  let data = await response.json();
-  return data.pokemon.map((p) => p.pokemon);
-}
-
-async function getRandomPokemonByType(type) {
-  let pokemons = await getPokemonByType(type);
-  let randomIndex = Math.floor(Math.random() * pokemons.length);
-  let randomPokemon = pokemons[randomIndex];
-  let response = await fetch(randomPokemon.url);
-  let pokemonData = await response.json();
-  return pokemonData.name;
-}
-
-document
-  .getElementById("select-type")
-  .addEventListener("change", async function (event) {
-    let selectedType = parseInt(event.target.value);
-    if (selectedType === 0) return;
-    let pokemonName = await getRandomPokemonByType(selectedType);
-    console.log(pokemonName);
-  });
