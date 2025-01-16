@@ -1,10 +1,39 @@
-const dictionary = ["earth", "plane", "crane", "audio", "house"];
+const dictionary = [
+  "earth",
+  "plane",
+  "crane",
+  "audio",
+  "house",
+  "gordos",
+  "butanero",
+  "mew",
+  "pikachu",
+  "charmander",
+  "bulbasaur",
+  "squirtle",
+  "pidgey",
+  "rattata",
+  "ekans",
+  "pikachu",
+  "sandshrew",
+  "nidoran",
+  "clefairy",
+  "vulpix",
+  "jigglypuff",
+  "zubat",
+  "oddish",
+  "paras",
+  "venonat",
+  "diglett",
+  "meowth",
+  "psyduck",
+];
 
 const state = {
   secret: dictionary[Math.floor(Math.random() * dictionary.length)],
   grid: Array(6)
     .fill()
-    .map(() => Array(5).fill("")),
+    .map(() => Array(dictionary[0].length).fill("")),
   currentRow: 0,
   currentCol: 0,
   keyboardState: {},
@@ -13,9 +42,10 @@ const state = {
 function drawGrid(container) {
   const grid = document.createElement("div");
   grid.className = "grid";
+  grid.style.gridTemplateColumns = `repeat(${state.secret.length}, auto)`;
 
   for (let i = 0; i < 6; i++) {
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < state.secret.length; j++) {
       drawBox(grid, i, j);
     }
   }
@@ -70,7 +100,9 @@ function drawKeyboard(container) {
   backspaceKey.className = "key special-key";
   backspaceKey.id = "key-backspace";
   backspaceKey.textContent = "⌫";
-  backspaceKey.addEventListener("click", () => handleVirtualKeyPress("Backspace"));
+  backspaceKey.addEventListener("click", () =>
+    handleVirtualKeyPress("Backspace")
+  );
   specialRow.appendChild(backspaceKey);
 
   keyboard.appendChild(specialRow);
@@ -80,7 +112,7 @@ function drawKeyboard(container) {
 
 function handleVirtualKeyPress(key) {
   if (key === "Enter") {
-    if (state.currentCol === 5) {
+    if (state.currentCol === state.secret.length) {
       const word = getCurrentWord();
       if (isWordValid(word)) {
         revealWord(word);
@@ -131,7 +163,7 @@ function registerKeyboardEvents() {
   document.body.onkeydown = (e) => {
     const key = e.key;
     if (key === "Enter") {
-      if (state.currentCol === 5) {
+      if (state.currentCol === state.secret.length) {
         const word = getCurrentWord();
         if (isWordValid(word)) {
           revealWord(word);
@@ -154,18 +186,60 @@ function registerKeyboardEvents() {
 }
 
 function getCurrentWord() {
-  return state.grid[state.currentRow].reduce((prev, curr) => prev + curr);
+  return state.grid[state.currentRow].join(""); // Más limpio
 }
 
 function isWordValid(word) {
-  return dictionary.includes(word);
+  return dictionary.includes(word.toLowerCase());
+}
+
+function restartGame() {
+  state.secret = dictionary[Math.floor(Math.random() * dictionary.length)];
+  state.grid = Array(6)
+    .fill()
+    .map(() => Array(state.secret.length).fill(""));
+  state.currentRow = 0;
+  state.currentCol = 0;
+  state.keyboardState = {};
+
+  const game = document.getElementById("game");
+  game.innerHTML = "";
+
+  drawGrid(game);
+  drawKeyboard(game);
+  registerKeyboardEvents();
+  console.log("Chivatazo: " + state.secret);
 }
 
 function revealWord(guess) {
   const row = state.currentRow;
-  const animation_duration = 500; //ms
+  const animation_duration = 500; // ms
 
-  for (let i = 0; i < 5; i++) {
+  // Si la palabra adivinada es correcta, marcamos todas las letras como correctas
+  if (state.secret === guess) {
+    for (let i = 0; i < state.secret.length; i++) {
+      const box = document.getElementById(`box-${row}-${i}`);
+      const letter = box.textContent;
+
+      setTimeout(() => {
+        box.classList.add("right");
+        state.keyboardState[letter] = "right";
+        updateKeyboard();
+      }, ((i + 1) * animation_duration) / 2);
+
+      box.classList.add("animated");
+      box.style.animationDelay = `${(i * animation_duration) / 2}ms`;
+    }
+
+    // Mensaje de victoria CON BOTÓN DE VOLVER A JUGAR
+    setTimeout(() => {
+      displayMessage("¡Bien jugado!", "success", true);
+    }, 3 * animation_duration);
+    return; // Salimos de la función para evitar el resto de la lógica
+  }
+
+  // Flujo normal: evaluar cada letra individualmente
+  for (let i = 0; i < state.secret.length; i++) {
     const box = document.getElementById(`box-${row}-${i}`);
     const letter = box.textContent;
 
@@ -188,24 +262,51 @@ function revealWord(guess) {
     box.classList.add("animated");
     box.style.animationDelay = `${(i * animation_duration) / 2}ms`;
   }
-  const isWinner = state.secret === guess;
+
+  // Evaluar si el juego terminó
   const isGameOver = state.currentRow === 5;
 
   setTimeout(() => {
-    if (isWinner) {
-      alert("Ganaste");
-    } else if (isGameOver) {
-      alert(`Buena suerte para la próxima! La palabra era: ${state.secret}.`);
+    if (isGameOver) {
+      displayMessage(`El pokemon era: ${state.secret}`, "error");
     }
   }, 3 * animation_duration);
 }
+
+function displayMessage(message, type, showRestartButton = false) {
+  const messageContainer = document.createElement("div");
+  messageContainer.className = `message ${type}`;
+  messageContainer.textContent = message;
+
+  // Si el mensaje es de éxito y showRestartButton es true, agregar un botón para reiniciar
+  if (showRestartButton) {
+    const restartButton = document.createElement("button");
+    restartButton.textContent = "Jugar de nuevo";
+    restartButton.className = "restart-button";
+    restartButton.addEventListener("click", () => restartGame());
+    messageContainer.appendChild(restartButton);
+  }
+
+  // Añadir el mensaje al cuerpo del juego
+  const gameContainer = document.getElementById("game");
+  gameContainer.appendChild(messageContainer);
+
+  // Opcional: eliminar el mensaje después de 3 segundos
+  /*
+  setTimeout(() => {
+    gameContainer.removeChild(messageContainer);
+  }, 3000);
+  */
+}
+  
+
 
 function isLetter(key) {
   return key.length === 1 && key.match(/[a-z]/i);
 }
 
 function addLetter(letter) {
-  if (state.currentCol === 5) return;
+  if (state.currentCol === state.secret.length) return;
   state.grid[state.currentRow][state.currentCol] = letter;
   state.currentCol++;
 }
@@ -218,6 +319,12 @@ function removeLetter() {
 
 function startup() {
   const game = document.getElementById("game");
+  game.innerHTML = "";
+
+  state.grid = Array(6)
+    .fill()
+    .map(() => Array(state.secret.length).fill(""));
+
   drawGrid(game);
   drawKeyboard(game);
 
