@@ -1,8 +1,8 @@
 const trainers1gen = [
-  "Ash Ketchum",
+  "Ash",
   "Misty",
   "Brock",
-  "Lt. Surge",
+  "Surge",
   "Erika",
   "Koga",
   "Sabrina",
@@ -12,25 +12,18 @@ const trainers1gen = [
   "Bruno",
   "Agatha",
   "Lance",
-  "Blue",
+  "Azul",
 ];
 
 const trainers2gen = [
-  "Ethan",
-  "Kris",
-  "Falkner",
-  "Bugsy",
-  "Whitney",
-  "Morty",
-  "Chuck",
-  "Jasmine",
-  "Pryce",
-  "Clair",
-  "Will",
-  "Karen",
-  "Koga",
-  "Bruno",
-  "Lance",
+  "Pegaso",
+  "Anton",
+  "Blanca",
+  "Morti",
+  "Anibal",
+  "Fredo",
+  "Jasmina",
+  "Debora",
 ];
 
 const trainers3gen = [
@@ -147,18 +140,53 @@ const trainers8gen = [
   "Avery",
 ];
 
-const trainers = [
-  ...trainers1gen,
-  ...trainers2gen,
-  ...trainers3gen,
-  ...trainers4gen,
-  ...trainers5gen,
-  ...trainers6gen,
-  ...trainers7gen,
-  ...trainers8gen,
+const trainers9gen = [
+  "Araceli",
+  "Brais",
+  "Enigma",
+  "Fuko",
+  "Laureano",
+  "lima",
+  "Tuli",
+  "Grusha",
 ];
 
+let generacion = 1;
+
+function scanerTrainers() {
+  switch (generacion) {
+    case 1:
+      return trainers1gen;
+    case 2:
+      return trainers2gen;
+    case 3:
+      return trainers3gen;
+    case 4:
+      return trainers4gen;
+    case 5:
+      return trainers5gen;
+    case 6:
+      return trainers6gen;
+    case 7:
+      return trainers7gen;
+    case 8:
+      return trainers8gen;
+    case 9:
+      return trainers9gen;
+    default:
+      return trainers1gen;
+  }
+}
+
+document
+  .getElementById("select-trainer")
+  .addEventListener("change", function () {
+    let select = document.getElementById("select-trainer");
+    generacion = select.selectedIndex;
+    console.log(getRandomTrainer());
+  });
+
 function getRandomTrainer() {
+  let trainers = scanerTrainers();
   return trainers[Math.floor(Math.random() * trainers.length)];
 }
-console.log(getRandomTrainer());
