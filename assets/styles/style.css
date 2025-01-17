@@ -62,7 +62,7 @@ a {
   top: 20%;
 }
 
-.seleccion-gen, .seleccion-tipo, .seleccion-region{
+.seleccion-gen, .seleccion-tipo, .seleccion-trainers{
   display: flex;
   width: 300px;
   align-items: center;
@@ -167,7 +167,7 @@ a {
 }
 
 .generaciones {
-  background-image: url(../img/generaciones-pokemon.webp);
+  background-image: url(../img/regiones.webp);
   background-size: cover;
   background-position: center;
   
@@ -182,7 +182,7 @@ a {
 }
 
 .regiones{
-  background-image: url(../img/regiones.webp);
+  background-image: url(../img/trainers.webp);
   background-size: cover;
   background-position: center;
   
