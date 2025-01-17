@@ -14,6 +14,7 @@ body {
   --empty: rgba(255, 255, 255, 0.8);
   --wrong: #e4a81d;
   --right: #43a047;
+  
 }
 
 .grid {
