@@ -175,7 +175,7 @@ a {
 }
 
 .tipos {
-  background-image: url(../img/tipos2.webp);
+  background-image: url(../img/eevee-evolutions.jpg);
   background-size: cover;
   background-position: center;
   
@@ -237,6 +237,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+ 
 }
 
 /* Animaciones */
