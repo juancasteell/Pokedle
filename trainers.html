@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/juego.css">
     <link rel="icon" href="./assets/img/pika_favicon.png" type="image/x-icon">
-    <title>Regiones</title>
+    <title>Juegos</title>
 </head>
 
 <body>
@@ -49,33 +49,34 @@
     <main>
 
         <div class="contenedor-select">
-        <div class="seleccion-region">
-            <h3>Selecciona tu Region</h3>
-            <select name="generaciones" id="select-gen" class="estilos-select">
-                <option value="1">Kanto</option>
-                <option value="2">Jhoto</option>
-                <option value="3">Hoenn</option>
-                <option value="4">Sinnoh</option>
-                <option value="5">Teselia</option>
-                <option value="6">Kalos</option>
-                <option value="7">Alola</option>
-                <option value="8">Galar</option>
-                <option value="9">Paldea</option>
-            </select>
+            <div class="seleccion-trainers">
+                <h3>Selecciona tu Region</h3>
+                <select name="regiones" id="select-trainer" class="estilos-select">
+                    <option value="0">Selecciona una entrenador...</option>
+                    <option value="1">Kanto</option>
+                    <option value="2">Jhoto</option>
+                    <option value="3">Hoenn</option>
+                    <option value="4">Sinnoh</option>
+                    <option value="5">Teselia</option>
+                    <option value="6">Kalos</option>
+                    <option value="7">Alola</option>
+                    <option value="8">Galar</option>
+                    <option value="9">Paldea</option>
+                </select>
 
-        </div>
+            </div>
         </div>
 
         <div class="contenedor-pista">
-        <section class="pista">Tipo: Agua</section>
-    </div>
+            <section class="pista">Tipo: Agua</section>
+        </div>
         <div id="game">
 
             <div class="grid">
 
             </div>
         </div>
-       
+
     </main>
 
 
@@ -84,7 +85,7 @@
     </footer>
 
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/poke.js"></script>
+    <script src="./assets/js/region.js"></script>
     <script src="/assets/js/juego.js" type="module"></script>
 
 </body>
