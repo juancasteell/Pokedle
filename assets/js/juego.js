@@ -298,8 +298,6 @@ function displayMessage(message, type, showRestartButton = false) {
   }, 3000);
   */
 }
-  
-
 
 function isLetter(key) {
   return key.length === 1 && key.match(/[a-z]/i);

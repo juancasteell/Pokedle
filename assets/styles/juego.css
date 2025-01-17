@@ -78,15 +78,20 @@ body {
 .keyboard-row {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .special-row {
-  justify-content: space-between; /* Alinear los botones en los extremos */
+  justify-content: center; /* Alinear ambos botones al centro */
+  gap: 10px; /* Ajustar el espacio entre los botones */
+  margin-top: -10px; /* Mover hacia arriba */
 }
 
+
 .spacer {
-  flex-grow: 1; /* Espaciador flexible para separar los botones */
+  flex-basis: auto;
+  width: 385px;
+
 }
 
 .key.special-key {
