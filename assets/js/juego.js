@@ -1,16 +1,16 @@
 import { initMenuDesplegable, testFunction } from "./script.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  initMenuDesplegable();
-  testFunction();
-});
-
 import {
   BASE_URL,
   generations,
   getPokemonRandomGeneracion,
   selectedGen,
 } from "./gen.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initMenuDesplegable();
+  testFunction();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("URL: " + BASE_URL);
