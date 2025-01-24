@@ -1,7 +1,7 @@
-const BASE_URL = "https://pokeapi.co/api/v2/";
+export const BASE_URL = "https://pokeapi.co/api/v2/";
 
 // Objeto que contiene las generaciones de Pokémon--------------------------------------------------
-const generations = {
+export const generations = {
   1: { start: 1, end: 151 },
   2: { start: 152, end: 251 },
   3: { start: 252, end: 386 },
@@ -13,15 +13,21 @@ const generations = {
   9: { start: 906, end: 1008 },
 };
 
-let selectedGen = 1;
+export let selectedGen = 1;
+export let firstTimeExecuting = true; //semaphore variable
 
 // Funcion que genera el nombre random de un pokemon dependiendo de su generacion-------------------
-async function getPokemonRandomGeneracion(event) {
-  selectedGen = parseInt(event.target.value);
-
-  if (selectedGen === 0) {
-    return;
+export async function getPokemonRandomGeneracion(event) {
+  //Prevent first time excution problem
+  if (!firstTimeExecuting) {
+    selectedGen = parseInt(event.target.value);
   }
+  firstTimeExecuting = false;
+  console.log(selectedGen);
+
+  // if (selectedGen === 0) {
+  //   return;
+  // }
 
   console.log("gen: ", selectedGen);
 
