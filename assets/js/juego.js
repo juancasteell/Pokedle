@@ -1,64 +1,25 @@
-import { initMenuDesplegable } from "./script.js";
+import { initMenuDesplegable, testFunction } from "./script.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   initMenuDesplegable();
-});
-
-import { testFunction } from "./script.js";
-document.addEventListener("DOMContentLoaded", () => {
   testFunction();
 });
 
 import {
-  getRandomLegendary,
-  legendario,
-  legendarios,
-  scanerLegend,
-} from "./legendarios.js";
+  BASE_URL,
+  generations,
+  getPokemonRandomGeneracion,
+  selectedGen,
+} from "./gen.js";
 
-// Ejemplo de uso:
-// - Acceder al array de legendarios
-console.log(legendarios);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("URL: " + BASE_URL);
+  console.log("Generaciones: " + generations);
+  console.log("Generacion seleccionada: " + selectedGen);
+  getPokemonRandomGeneracion();
+});
 
-// - Obtener un grupo de legendarios según el índice
-console.log(scanerLegend());
-
-// - Obtener un legendario aleatorio
-console.log(getRandomLegendary());
-
-// - Cambiar el índice actual del grupo de legendarios
-legendario = 2;
-console.log(scanerLegend());
-
-const dictionary = [
-  "earth",
-  "plane",
-  "crane",
-  "audio",
-  "house",
-  "gordos",
-  "butanero",
-  "mew",
-  "pikachu",
-  "charmander",
-  "bulbasaur",
-  "squirtle",
-  "pidgey",
-  "rattata",
-  "ekans",
-  "pikachu",
-  "sandshrew",
-  "nidoran",
-  "clefairy",
-  "vulpix",
-  "jigglypuff",
-  "zubat",
-  "oddish",
-  "paras",
-  "venonat",
-  "diglett",
-  "meowth",
-  "psyduck",
-];
+const dictionary = ["meowth", "psyduck"];
 
 const state = {
   secret: dictionary[Math.floor(Math.random() * dictionary.length)],

@@ -109,8 +109,12 @@ export function getRandomLegendary() {
   return legendarioDef[Math.floor(Math.random() * legendarioDef.length)];
 }
 
-document.getElementById("select-LeGen").addEventListener("change", function () {
+export function handleLegendaryChange() {
   let select = document.getElementById("select-LeGen");
   legendario = select.selectedIndex;
   console.log(getRandomLegendary());
-});
+}
+
+document
+  .getElementById("select-LeGen")
+  .addEventListener("change", handleLegendaryChange);
