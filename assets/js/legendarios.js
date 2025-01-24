@@ -1,4 +1,4 @@
-const legendarios = [
+export const legendarios = [
   ["Articuno", "Zapdos", "Moltres", "Mewtwo", "Mew"],
   ["Raikou", "Entei", "Suicune", "Lugia", "Ho-oh", "Celebi"],
   [
@@ -77,21 +77,9 @@ const legendarios = [
   ],
 ];
 
-/*
-const legendarios1Gen = legendarios[0];
-const legendarios2Gen = legendarios[1];
-const legendarios3Gen = legendarios[2];
-const legendarios4Gen = legendarios[3];
-const legendarios5Gen = legendarios[4];
-const legendarios6Gen = legendarios[5];
-const legendarios7Gen = legendarios[6];
-const legendarios8Gen = legendarios[7];
-const legendarios9Gen = legendarios[8];
-*/
+export let legendario = 1;
 
-let legendario = 1;
-
-function scanerLegend() {
+export function scanerLegend() {
   switch (legendario) {
     case 1:
       return legendarios[0];
@@ -116,13 +104,13 @@ function scanerLegend() {
   }
 }
 
-document.getElementById("select-LeGen").addEventListener("change", function () {
-  let select = document.getElementById("select-LeGen");
-  legendario = select.selectedIndex;
-  console.log(getRandomTrainer());
-});
-
-function getRandomTrainer() {
+export function getRandomLegendary() {
   let legendarioDef = scanerLegend();
   return legendarioDef[Math.floor(Math.random() * legendarioDef.length)];
 }
+
+document.getElementById("select-LeGen").addEventListener("change", function () {
+  let select = document.getElementById("select-LeGen");
+  legendario = select.selectedIndex;
+  console.log(getRandomLegendary());
+});

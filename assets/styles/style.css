@@ -25,7 +25,7 @@ header img {
   object-fit: contain;
 }
 
-.barra{
+.barra {
   position: relative;
   top: -20px;
 }
@@ -41,7 +41,7 @@ a {
   color: #fff;
 }
 
-.menu-desplegable {
+/* .menu-desplegable {
   position: fixed;
   top: 0;
   display: flex;
@@ -54,13 +54,52 @@ a {
   transition: left 0.3s ease;
   flex-direction: column;
   gap: 20px;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .menu-desplegable.active {
   left: 0;
+} */
+
+/* Estilo base para el menú desplegable */
+.menu-desplegable {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(145deg, #000000, #55009b, #000000);
+  border-right: 1px solid #a200ff;
+  padding: 20px;
+  transition: left 0.3s ease;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+  display: flex;
 }
 
+/* Cuando se activa el menú */
+.menu-desplegable.active {
+  left: 0; /* Mueve el menú a la vista */
+}
+
+/* Enlaces dentro del menú */
+.menu-desplegable a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.menu-desplegable a:hover {
+  background-color: #ddd;
+  color: black; /* Cambia el color cuando se pasa el ratón */
+}
+
+/* Añadir estilos a la sección de menú iconos */
+.header-icons a {
+  color: white;
+}
 
 .contenedor-select {
   position: absolute;
@@ -68,7 +107,10 @@ a {
   top: 19%;
 }
 
-.seleccion-gen, .seleccion-tipo, .seleccion-trainers, .seleccion-legendario{
+.seleccion-gen,
+.seleccion-tipo,
+.seleccion-trainers,
+.seleccion-legendario {
   display: flex;
   width: 300px;
   align-items: center;
@@ -80,7 +122,8 @@ a {
   border: 2px solid;
   border-image: linear-gradient(145deg, #ae00ff, #00ffff) 1;
   animation: border-move 3s linear infinite;
-  box-shadow: 0 0 10px 2px rgba(174, 0, 255, 0.7), 0 0 10px 2px rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 10px 2px rgba(174, 0, 255, 0.7),
+    0 0 10px 2px rgba(0, 255, 255, 0.7);
 }
 
 @keyframes border-move {
@@ -96,7 +139,7 @@ a {
 }
 
 .estilos-select {
-  background:  #9b24fc;
+  background: #9b24fc;
   color: #fff;
   width: 80%;
   padding: 5px;
@@ -106,10 +149,9 @@ a {
 }
 
 .contenedor-pista {
- position: absolute;
- right: 2%;
+  position: absolute;
+  right: 2%;
   top: 19%;
-  
 }
 
 .pista {
@@ -126,15 +168,16 @@ a {
   border: 2px solid;
   border-image: linear-gradient(145deg, #ae00ff, #00ffff) 1;
   animation: border-move 6s linear infinite;
-  box-shadow: 0 0 10px 2px rgba(174, 0, 255, 0.7), 0 0 10px 2px rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 10px 2px rgba(174, 0, 255, 0.7),
+    0 0 10px 2px rgba(0, 255, 255, 0.7);
 }
 
 @media screen and (max-width: 1000px) {
-  .contenedor-select, .contenedor-pista {
+  .contenedor-select,
+  .contenedor-pista {
     display: none;
   }
 }
-
 
 .main-content {
   display: flex;
@@ -176,31 +219,25 @@ a {
   background-image: url(../img/regiones.webp);
   background-size: cover;
   background-position: center;
-  
-  
 }
 
 .tipos {
   background-image: url(../img/eevee-evolutions.jpg);
   background-size: cover;
   background-position: center;
-  
 }
 
-.regiones{
+.regiones {
   background-image: url(../img/trainers.webp);
   background-size: cover;
   background-position: center;
-  
 }
 
-.legendarios{
+.legendarios {
   background-image: url(../img/pokemon-legendarios.webp);
   background-size: cover;
   background-position: center;
- 
 }
-
 
 .titulo-juego {
   position: absolute;
@@ -243,7 +280,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
- 
 }
 
 /* Animaciones */

@@ -28,8 +28,6 @@ async function getPokemonRandomGeneracion(event) {
   // Obtiene la primera generación de Pokémon del objeto 'generations'
   let gen = generations[selectedGen];
 
-  console.log("Estoy dentro?", gen);
-
   // Genera un ID aleatorio dentro de la primera generación
   let randomId =
     Math.floor(Math.random() * (gen.end - gen.start + 1)) + gen.start;
@@ -40,7 +38,7 @@ async function getPokemonRandomGeneracion(event) {
   // Convierte la respuesta de la API a formato JSON
   let pokemon = await response.json();
 
-  console.log(pokemon.name);
+  console.log("Chivatazo: " + pokemon.name);
 
   // Devuelve el nombre del Pokémon obtenido .name para que solo devuelva
   // el nombre y no todo (stats, ataques, etc)

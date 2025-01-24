@@ -1,3 +1,34 @@
+import { initMenuDesplegable } from "./script.js";
+document.addEventListener("DOMContentLoaded", () => {
+  initMenuDesplegable();
+});
+
+import { testFunction } from "./script.js";
+document.addEventListener("DOMContentLoaded", () => {
+  testFunction();
+});
+
+import {
+  getRandomLegendary,
+  legendario,
+  legendarios,
+  scanerLegend,
+} from "./legendarios.js";
+
+// Ejemplo de uso:
+// - Acceder al array de legendarios
+console.log(legendarios);
+
+// - Obtener un grupo de legendarios según el índice
+console.log(scanerLegend());
+
+// - Obtener un legendario aleatorio
+console.log(getRandomLegendary());
+
+// - Cambiar el índice actual del grupo de legendarios
+legendario = 2;
+console.log(scanerLegend());
+
 const dictionary = [
   "earth",
   "plane",
