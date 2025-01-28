@@ -1,0 +1,316 @@
+{
+  "legendarios": [
+    {
+      "nombre": "Articuno",
+      "tipo": ["Hielo", "Volador"]
+    },
+    {
+      "nombre": "Zapdos",
+      "tipo": ["Eléctrico", "Volador"]
+    },
+    {
+      "nombre": "Moltres",
+      "tipo": ["Fuego", "Volador"]
+    },
+    {
+      "nombre": "Mewtwo",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Mew",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Raikou",
+      "tipo": ["Eléctrico"]
+    },
+    {
+      "nombre": "Entei",
+      "tipo": ["Fuego"]
+    },
+    {
+      "nombre": "Suicune",
+      "tipo": ["Agua"]
+    },
+    {
+      "nombre": "Lugia",
+      "tipo": ["Psíquico", "Volador"]
+    },
+    {
+      "nombre": "Ho-oh",
+      "tipo": ["Fuego", "Volador"]
+    },
+    {
+      "nombre": "Celebi",
+      "tipo": ["Psíquico", "Planta"]
+    },
+    {
+      "nombre": "Regirock",
+      "tipo": ["Roca"]
+    },
+    {
+      "nombre": "Regice",
+      "tipo": ["Hielo"]
+    },
+    {
+      "nombre": "Registeel",
+      "tipo": ["Acero"]
+    },
+    {
+      "nombre": "Latias",
+      "tipo": ["Dragón", "Psíquico"]
+    },
+    {
+      "nombre": "Latios",
+      "tipo": ["Dragón", "Psíquico"]
+    },
+    {
+      "nombre": "Kyogre",
+      "tipo": ["Agua"]
+    },
+    {
+      "nombre": "Groudon",
+      "tipo": ["Tierra"]
+    },
+    {
+      "nombre": "Rayquaza",
+      "tipo": ["Dragón", "Volador"]
+    },
+    {
+      "nombre": "Jirachi",
+      "tipo": ["Acero", "Psíquico"]
+    },
+    {
+      "nombre": "Deoxys",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Uxie",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Mesprit",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Azelf",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Dialga",
+      "tipo": ["Acero", "Dragón"]
+    },
+    {
+      "nombre": "Palkia",
+      "tipo": ["Agua", "Dragón"]
+    },
+    {
+      "nombre": "Heatran",
+      "tipo": ["Fuego", "Acero"]
+    },
+    {
+      "nombre": "Regigigas",
+      "tipo": ["Normal"]
+    },
+    {
+      "nombre": "Giratina",
+      "tipo": ["Fantasma", "Dragón"]
+    },
+    {
+      "nombre": "Cresselia",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Phione",
+      "tipo": ["Agua"]
+    },
+    {
+      "nombre": "Manaphy",
+      "tipo": ["Agua"]
+    },
+    {
+      "nombre": "Darkrai",
+      "tipo": ["Siniestro"]
+    },
+    {
+      "nombre": "Shaymin",
+      "tipo": ["Planta"]
+    },
+    {
+      "nombre": "Arceus",
+      "tipo": ["Normal"]
+    },
+    {
+      "nombre": "Victini",
+      "tipo": ["Psíquico", "Fuego"]
+    },
+    {
+      "nombre": "Cobalion",
+      "tipo": ["Acero", "Lucha"]
+    },
+    {
+      "nombre": "Terrakion",
+      "tipo": ["Roca", "Lucha"]
+    },
+    {
+      "nombre": "Virizion",
+      "tipo": ["Planta", "Lucha"]
+    },
+    {
+      "nombre": "Tornadus",
+      "tipo": ["Volador"]
+    },
+    {
+      "nombre": "Thundurus",
+      "tipo": ["Eléctrico", "Volador"]
+    },
+    {
+      "nombre": "Reshiram",
+      "tipo": ["Dragón", "Fuego"]
+    },
+    {
+      "nombre": "Zekrom",
+      "tipo": ["Dragón", "Eléctrico"]
+    },
+    {
+      "nombre": "Landorus",
+      "tipo": ["Tierra", "Volador"]
+    },
+    {
+      "nombre": "Kyurem",
+      "tipo": ["Dragón", "Hielo"]
+    },
+    {
+      "nombre": "Keldeo",
+      "tipo": ["Agua", "Lucha"]
+    },
+    {
+      "nombre": "Meloetta",
+      "tipo": ["Normal", "Psíquico"]
+    },
+    {
+      "nombre": "Genesect",
+      "tipo": ["Bicho", "Acero"]
+    },
+    {
+      "nombre": "Xerneas",
+      "tipo": ["Hada"]
+    },
+    {
+      "nombre": "Yveltal",
+      "tipo": ["Siniestro", "Volador"]
+    },
+    {
+      "nombre": "Zygarde",
+      "tipo": ["Dragón", "Tierra"]
+    },
+    {
+      "nombre": "Diancie",
+      "tipo": ["Roca", "Hada"]
+    },
+    {
+      "nombre": "Hoopa",
+      "tipo": ["Psíquico", "Fantasma"]
+    },
+    {
+      "nombre": "Volcanion",
+      "tipo": ["Fuego", "Agua"]
+    },
+    {
+      "nombre": "Silvally",
+      "tipo": ["Normal"]
+    },
+    {
+      "nombre": "Cosmog",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Cosmoem",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Solgaleo",
+      "tipo": ["Psíquico", "Acero"]
+    },
+    {
+      "nombre": "Lunala",
+      "tipo": ["Psíquico", "Fantasma"]
+    },
+    {
+      "nombre": "Necrozma",
+      "tipo": ["Psíquico"]
+    },
+    {
+      "nombre": "Magearna",
+      "tipo": ["Acero", "Hada"]
+    },
+    {
+      "nombre": "Marshadow",
+      "tipo": ["Lucha", "Fantasma"]
+    },
+    {
+      "nombre": "Zeraora",
+      "tipo": ["Eléctrico"]
+    },
+    {
+      "nombre": "Eternatus",
+      "tipo": ["Veneno", "Dragón"]
+    },
+    {
+      "nombre": "Kalyrex",
+      "tipo": ["Psíquico", "Planta"]
+    },
+    {
+      "nombre": "Zacian",
+      "tipo": ["Hada", "Acero"]
+    },
+    {
+      "nombre": "Zamazeta",
+      "tipo": ["Lucha", "Acero"]
+    },
+    {
+      "nombre": "Kubfu",
+      "tipo": ["Lucha"]
+    },
+    {
+      "nombre": "Urshifu",
+      "tipo": ["Lucha", "Siniestro"]
+    },
+    {
+      "nombre": "Glasterier",
+      "tipo": ["Hielo"]
+    },
+    {
+      "nombre": "Spectrier",
+      "tipo": ["Fantasma"]
+    },
+    {
+      "nombre": "Koraidon",
+      "tipo": ["Lucha", "Dragón"]
+    },
+    {
+      "nombre": "Miraidon",
+      "tipo": ["Eléctrico", "Dragón"]
+    },
+    {
+      "nombre": "Terapagos",
+      "tipo": ["Hada"]
+    },
+    {
+      "nombre": "Okidogi",
+      "tipo": ["Veneno", "Lucha"]
+    },
+    {
+      "nombre": "Chienpao",
+      "tipo": ["Siniestro", "Hielo"]
+    },
+    {
+      "nombre": "Tinglu",
+      "tipo": ["Siniestro", "Tierra"]
+    },
+    {
+      "nombre": "Chiyu",
+      "tipo": ["Siniestro", "Fuego"]
+    }
+  ]
+}

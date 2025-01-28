@@ -46,11 +46,35 @@ export async function getPokemonRandomTipo(event) {
   let pokemonResponse = await fetch(randomPokemon.url);
   let pokemon = await pokemonResponse.json();
 
-  console.log(pokemon.name);
+  console.log(`Pokemon: ${pokemon.name}`);
+
+  // Obtener la generación del Pokémon
+  let speciesResponse = await fetch(pokemon.species.url);
+  let speciesData = await speciesResponse.json();
+  let generation = speciesData.generation.name; // Ejemplo: "generation-i"
+
+  // Mapeo para convertir generación a números
+  const numRomanosAnumNormales = {
+    "generation-i": 1,
+    "generation-ii": 2,
+    "generation-iii": 3,
+    "generation-iv": 4,
+    "generation-v": 5,
+    "generation-vi": 6,
+    "generation-vii": 7,
+    "generation-viii": 8,
+    "generation-ix": 9,
+  };
+
+  let generationNumber = numRomanosAnumNormales[generation];
+
+  console.log(`Generación: ${generationNumber}`);
+
+  // Actualizar el contenido del elemento con id="pista"
+  const pistaElement = document.getElementById("pista");
+  if (pistaElement) {
+    pistaElement.textContent = `Generación: ${generationNumber}`;
+  }
 
   return pokemon.name;
 }
-
-/* document
-  .getElementById("select-type")
-  .addEventListener("change", getPokemonRandomTipo); */
