@@ -119,6 +119,7 @@ export function handleLegendaryChange() {
   }
 }
 
-document
+/* document
   .getElementById("select-LeGen")
   .addEventListener("change", handleLegendaryChange);
+ */
