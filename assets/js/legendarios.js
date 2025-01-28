@@ -111,8 +111,12 @@ export function getRandomLegendary() {
 
 export function handleLegendaryChange() {
   let select = document.getElementById("select-LeGen");
-  legendario = select.selectedIndex;
-  console.log(getRandomLegendary());
+  if (select) {
+    legendario = select.selectedIndex;
+    console.log(getRandomLegendary());
+  } else {
+    console.error("Elemento select-LeGen no encontrado.");
+  }
 }
 
 document
