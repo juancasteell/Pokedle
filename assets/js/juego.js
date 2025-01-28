@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       break;
 
     default:
-      console.log("No se ha encontrado: " + page);
+      console.log("No hay data-page");
   }
 });
 
@@ -358,7 +358,7 @@ function removeLetter() {
 function startup() {
   const game = document.getElementById("game");
   if (!game) {
-    console.error("El contenedor #game no existe.");
+    // console.error("El contenedor #game no existe.");
     return;
   }
   game.innerHTML = "";

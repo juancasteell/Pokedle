@@ -1,9 +1,7 @@
-// Funcion para ver si se exporta correctamente desde scritp
+/* // Funcion para ver si se exporta correctamente desde scritp
 export function testFunction() {
-  console.log(
-    "Mes estoy ejecutando lo que significa que la putisima funcion funciona"
-  );
-}
+  console.log("Mes estoy ejecutando");
+} */
 
 // Función para inicializar el menú desplegable
 export function initMenuDesplegable() {
