@@ -52,7 +52,13 @@ export async function getPokemonRandomGeneracion(event) {
   // Convierte la respuesta de la API a formato JSON
   let pokemon = await response.json();
 
-  console.log("Chivatazo: " + pokemon.name);
+  // Obtén los tipos del Pokémon desde la respuesta
+  let types = pokemon.types.map((type) => type.type.name).join(", ");
+
+  const pistaElement = document.getElementById("pista");
+  if (pistaElement) {
+    pistaElement.textContent = `Tipo: ${types}`;
+  }
 
   // Devuelve el nombre del Pokémon obtenido .name para que solo devuelva
   // el nombre y no todo (stats, ataques, etc)
