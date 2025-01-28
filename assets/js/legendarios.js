@@ -118,8 +118,3 @@ export function handleLegendaryChange() {
     console.error("Elemento select-LeGen no encontrado.");
   }
 }
-
-/* document
-  .getElementById("select-LeGen")
-  .addEventListener("change", handleLegendaryChange);
- */
