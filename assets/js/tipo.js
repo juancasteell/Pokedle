@@ -1,6 +1,6 @@
-const BASE_URL = "https://pokeapi.co/api/v2/";
+export const BASE_URL = "https://pokeapi.co/api/v2/";
 
-const types = {
+export const types = {
   1: "water",
   2: "fire",
   3: "grass",
@@ -21,8 +21,8 @@ const types = {
   18: "dark",
 };
 
-async function getPokemonRandomTipo(event) {
-  selectedType = parseInt(event.target.value);
+export async function getPokemonRandomTipo(event) {
+  const selectedType = parseInt(event.target.value);
 
   if (selectedType === 0) {
     return;
@@ -51,6 +51,6 @@ async function getPokemonRandomTipo(event) {
   return pokemon.name;
 }
 
-document
+/* document
   .getElementById("select-type")
-  .addEventListener("change", getPokemonRandomTipo);
+  .addEventListener("change", getPokemonRandomTipo); */

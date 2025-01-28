@@ -1,8 +1,12 @@
 import { initMenuDesplegable } from "./script.js";
 
 import { getPokemonRandomGeneracion } from "./gen.js";
+import { getRandomLegendary, handleLegendaryChange } from "./legendarios.js";
+import { getPokemonRandomTipo } from "./tipo.js";
+import { getRandomTrainer, updateTrainerGeneration } from "./trainers.js";
 
 let dictionary = ["pokemon"]; // Declarar inicialmente
+let pokemonNombre = "";
 
 document.addEventListener("DOMContentLoaded", () => {
   initMenuDesplegable();
@@ -13,23 +17,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   switch (page) {
     case "generaciones":
-      const selectElement = document.getElementById("select-gen"); // ID del select en el HTML
-      selectElement.addEventListener("change", async (event) => {
-        const newWord = await getPokemonRandomGeneracion(event);
-        if (newWord) {
-          dictionary = [newWord]; // Actualizamos el diccionario con la nueva palabra
+      const selectGeneracion = document.getElementById("select-gen"); // ID del select en el HTML
+      selectGeneracion.addEventListener("change", async (event) => {
+        pokemonNombre = await getPokemonRandomGeneracion(event);
+        if (pokemonNombre) {
+          dictionary = [pokemonNombre]; // Actualizamos el diccionario con la nueva palabra
           restartGame(); // Reiniciamos el juego con la nueva palabra
         }
       });
       break;
 
     case "legendarios":
+      const selectLegendario = document.getElementById("select-LeGen");
+      selectLegendario.addEventListener("change", async (event) => {
+        handleLegendaryChange(event);
+        pokemonNombre = getRandomLegendary();
+        if (pokemonNombre) {
+          dictionary = [pokemonNombre];
+          restartGame();
+        }
+      });
       break;
 
     case "tipos":
+      const selectTipo = document.getElementById("select-type");
+      selectTipo.addEventListener("change", async (event) => {
+        pokemonNombre = await getPokemonRandomTipo(event);
+        if (pokemonNombre) {
+          dictionary = [pokemonNombre];
+          restartGame();
+        }
+      });
       break;
 
     case "trainers":
+      const selectTrainer = document.getElementById("select-trainer");
+      selectTrainer.addEventListener("change", () => {
+        updateTrainerGeneration();
+        pokemonNombre = getRandomTrainer();
+        if (pokemonNombre) {
+          dictionary = [pokemonNombre];
+          restartGame();
+        }
+      });
       break;
 
     default:

@@ -1,3 +1,19 @@
+export {
+  generacion,
+  getRandomTrainer,
+  scanerTrainers,
+  trainers1gen,
+  trainers2gen,
+  trainers3gen,
+  trainers4gen,
+  trainers5gen,
+  trainers6gen,
+  trainers7gen,
+  trainers8gen,
+  trainers9gen,
+  updateTrainerGeneration,
+};
+
 const trainers1gen = [
   "Ash",
   "Misty",
@@ -178,15 +194,12 @@ function scanerTrainers() {
   }
 }
 
-document
-  .getElementById("select-trainer")
-  .addEventListener("change", function () {
-    let select = document.getElementById("select-trainer");
-    generacion = select.selectedIndex;
-    console.log(getRandomTrainer());
-  });
-
 function getRandomTrainer() {
   let trainers = scanerTrainers();
   return trainers[Math.floor(Math.random() * trainers.length)];
+}
+
+function updateTrainerGeneration() {
+  let select = document.getElementById("select-trainer");
+  generacion = select.selectedIndex;
 }
