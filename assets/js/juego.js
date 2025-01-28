@@ -6,6 +6,22 @@ import {
   getPokemonRandomGeneracion,
   selectedGen,
 } from "./gen.js";
+//-----------------------------------------------------------------------------C
+import {
+  getRandomLegendary,
+  legendario,
+  legendarios,
+  scanerLegend,
+} from "./legendarios.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  legendarios[1];
+  console.log(legendario);
+  scanerLegend();
+  getRandomLegendary();
+});
+
+// -----------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
   initMenuDesplegable();
