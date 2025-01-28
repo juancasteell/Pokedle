@@ -1,3 +1,11 @@
+/* export {
+  BASE_URL,
+  firstTimeExecuting,
+  generations,
+  getPokemonRandomGeneracion,
+  selectedGen,
+}; */
+
 export const BASE_URL = "https://pokeapi.co/api/v2/";
 
 // Objeto que contiene las generaciones de Pokémon--------------------------------------------------
@@ -51,6 +59,6 @@ export async function getPokemonRandomGeneracion(event) {
   return pokemon.name;
 }
 
-document
+/* document
   .getElementById("select-gen")
-  .addEventListener("change", getPokemonRandomGeneracion);
+  .addEventListener("change", getPokemonRandomGeneracion); */

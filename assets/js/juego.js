@@ -1,43 +1,43 @@
-import { initMenuDesplegable, testFunction } from "./script.js";
+import { initMenuDesplegable } from "./script.js";
 
-import {
-  BASE_URL,
-  generations,
-  getPokemonRandomGeneracion,
-  selectedGen,
-} from "./gen.js";
-//-----------------------------------------------------------------------------C
-import {
-  getRandomLegendary,
-  legendario,
-  legendarios,
-  scanerLegend,
-} from "./legendarios.js";
+import { getPokemonRandomGeneracion } from "./gen.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  legendarios[1];
-  console.log(legendario);
-  scanerLegend();
-  getRandomLegendary();
-});
-
-// -----------------------------------------------------------------------------
+let dictionary = ["pokemon"]; // Declarar inicialmente
 
 document.addEventListener("DOMContentLoaded", () => {
   initMenuDesplegable();
-  testFunction();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("URL: " + BASE_URL);
-  console.log("Generaciones: " + generations);
-  console.log("Generacion seleccionada: " + selectedGen);
-  getPokemonRandomGeneracion();
+  const page = document.body.dataset.page;
+
+  switch (page) {
+    case "generaciones":
+      const selectElement = document.getElementById("select-gen"); // ID del select en el HTML
+      selectElement.addEventListener("change", async (event) => {
+        const newWord = await getPokemonRandomGeneracion(event);
+        if (newWord) {
+          dictionary = [newWord]; // Actualizamos el diccionario con la nueva palabra
+          restartGame(); // Reiniciamos el juego con la nueva palabra
+        }
+      });
+      break;
+
+    case "legendarios":
+      break;
+
+    case "tipos":
+      break;
+
+    case "trainers":
+      break;
+
+    default:
+      console.log("No se ha encontrado: " + page);
+  }
 });
 
-const dictionary = ["meowth", "psyduck"];
-
-const state = {
+let state = {
   secret: dictionary[Math.floor(Math.random() * dictionary.length)],
   grid: Array(6)
     .fill()
@@ -202,10 +202,11 @@ function isWordValid(word) {
 }
 
 function restartGame() {
-  state.secret = dictionary[Math.floor(Math.random() * dictionary.length)];
+  const secretWord = dictionary[0];
+  state.secret = secretWord; // Actualizamos el estado con la palabra del diccionario
   state.grid = Array(6)
     .fill()
-    .map(() => Array(state.secret.length).fill(""));
+    .map(() => Array(secretWord.length).fill("")); // Grid basado en el tamaño de la palabra
   state.currentRow = 0;
   state.currentCol = 0;
   state.keyboardState = {};
@@ -213,10 +214,11 @@ function restartGame() {
   const game = document.getElementById("game");
   game.innerHTML = "";
 
-  drawGrid(game);
-  drawKeyboard(game);
-  registerKeyboardEvents();
-  console.log("Chivatazo: " + state.secret);
+  drawGrid(game); // Redibujar el grid basado en el tamaño de la palabra
+  drawKeyboard(game); // Mantener el teclado
+  registerKeyboardEvents(); // Registrar eventos de teclado
+
+  console.log("Chivatazo: " + state.secret); // Para pruebas
 }
 
 function revealWord(guess) {
@@ -325,18 +327,24 @@ function removeLetter() {
 
 function startup() {
   const game = document.getElementById("game");
+  if (!game) {
+    console.error("El contenedor #game no existe.");
+    return;
+  }
   game.innerHTML = "";
 
+  const secretWord = dictionary[0];
+  state.secret = secretWord;
   state.grid = Array(6)
     .fill()
-    .map(() => Array(state.secret.length).fill(""));
+    .map(() => Array(secretWord.length).fill(""));
 
-  drawGrid(game);
+  drawGrid(game); // Dibujar grid basado en la palabra inicial
   drawKeyboard(game);
 
   registerKeyboardEvents();
 
-  console.log("Chivatazo: " + state.secret);
+  console.log("Chivatazo: " + state.secret); // Para pruebas
 }
 
 startup();
